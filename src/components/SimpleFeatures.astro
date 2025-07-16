@@ -1,0 +1,146 @@
+---
+---
+
+<section class="section">
+  <div class="container">
+    <div class="features-content">
+      <h2>What You Get in Captain Said</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">⚓</div>
+          <h3>For Sailors & Future Sailors</h3>
+          <p>Get help with sailing logistics, route planning, equipment recommendations, and lessons learned from our journey around the world</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🍽️</div>
+          <h3>Local Insights & Food</h3>
+          <p>Discover the best places to eat, hidden gems, local customs, and practical tips for each destination we visit</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <h3>Real-Time Adventure</h3>
+          <p>Live updates, behind-the-scenes moments, weather challenges, and daily life aboard SV Holdfast as it happens</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🌍</div>
+          <h3>Armchair Adventurers</h3>
+          <p>Live the journey with us! Experience the adventure, ask questions, and be part of the story without leaving home</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💬</div>
+          <h3>Community & Support</h3>
+          <p>Connect with fellow sailors, dreamers, and adventure seekers. Share experiences and get advice from the community</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <h3>Practical Tips & Tricks</h3>
+          <p>Learn from our mistakes and successes. Get practical advice on everything from boat maintenance to border crossings</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-content {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .feature {
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.2s ease;
+  }
+
+  .feature:hover {
+    border-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #000000;
+  }
+
+  .feature p {
+    font-size: 1rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .feature {
+      padding: 1.75rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature {
+      padding: 1.5rem;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+    }
+
+    .feature h3 {
+      font-size: 1.125rem;
+    }
+
+    .feature p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .feature {
+      padding: 1.25rem;
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+    }
+
+    .feature h3 {
+      font-size: 1rem;
+    }
+
+    .feature p {
+      font-size: 0.875rem;
+    }
+  }
+</style>

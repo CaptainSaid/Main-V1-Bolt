@@ -1,0 +1,380 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Join Captain Said - Telegram Setup">
+  <Header />
+  
+  <section class="walkthrough-hero">
+    <div class="container">
+      <div class="walkthrough-content">
+        <div class="walkthrough-header">
+          <h1>Welcome Aboard, Captain!</h1>
+          <p>Follow these 4 simple steps to join the crew</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step active" data-step="1">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Accept the Captain Said Bot</h3>
+              <div class="step-gif">
+                <div class="gif-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15C21 15.5 20.5 16 20 16H7L3 20V4C3 3.5 3.5 3 4 3H20C20.5 3 21 3.5 21 4V15Z"/>
+                    <path d="M8 10L12 14L16 10"/>
+                  </svg>
+                  <p>Click "Accept Bot" when you see the Captain Said Telegram invite</p>
+                </div>
+              </div>
+              <button class="step-btn" onclick="nextStep(2)">Next Step</button>
+            </div>
+          </div>
+          
+          <div class="step" data-step="2">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Click Subscribe in Telegram</h3>
+              <div class="step-gif">
+                <div class="gif-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 2L11 13"/>
+                    <path d="M21 2L14 21L11 13L3 10L21 2Z"/>
+                  </svg>
+                  <p>Open the Telegram chat and click the "Subscribe" button</p>
+                </div>
+              </div>
+              <button class="step-btn" onclick="nextStep(3)">Next Step</button>
+            </div>
+          </div>
+          
+          <div class="step" data-step="3">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Complete Your Subscription</h3>
+              <div class="step-gif">
+                <div class="gif-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="20" height="14" x="2" y="5" rx="2"/>
+                    <path d="M2 10L12 15L22 10"/>
+                  </svg>
+                  <p>Complete your $10/month subscription through our secure Stripe checkout</p>
+                </div>
+              </div>
+              <button class="step-btn" onclick="nextStep(4)">Next Step</button>
+            </div>
+          </div>
+          
+          <div class="step" data-step="4">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Welcome to the Crew!</h3>
+              <div class="step-gif">
+                <div class="gif-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21V19C16 16.8 14.2 15 12 15S8 16.8 8 19V21"/>
+                    <circle cx="12" cy="7" r="4"/>
+                    <path d="M22 21V19C22 18.1 21.1 17 20 17C18.9 17 18 18.1 18 19V21"/>
+                    <path d="M4 21V19C4 18.1 4.9 17 6 17C7.1 17 8 18.1 8 19V21"/>
+                  </svg>
+                  <p>Your group chat is now unlocked! Start chatting with Captain Brian and the crew</p>
+                </div>
+              </div>
+              <button class="step-btn join-btn" onclick="joinTelegram()">Join Captain Said Chat</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .walkthrough-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .walkthrough-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .walkthrough-header {
+    margin-bottom: 2rem;
+  }
+
+  .walkthrough-header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    color: #000000;
+  }
+
+  .walkthrough-header p {
+    font-size: 1rem;
+    color: #666666;
+    margin: 0;
+  }
+
+  .steps-container {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    text-align: left;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .step {
+    display: none;
+    text-align: center;
+  }
+
+  .step.active {
+    display: block;
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0 auto 1.5rem;
+  }
+
+  .step-content {
+    width: 100%;
+  }
+
+  .step-content h3 {
+    font-size: 1.375rem;
+    margin-bottom: 1.25rem;
+    color: #000000;
+    font-weight: 700;
+  }
+
+  .step-gif {
+    margin-bottom: 1.75rem;
+  }
+
+  .gif-placeholder {
+    background: #f8f8f8;
+    border: 2px dashed #e0e0e0;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: #666666;
+  }
+
+  .gif-placeholder svg {
+    margin-bottom: 0.75rem;
+    color: #999999;
+  }
+
+  .gif-placeholder p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #666666;
+  }
+
+  .step-btn {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .step-btn:hover {
+    background: #333333;
+    transform: translateY(-1px);
+  }
+
+  .join-btn {
+    background: #22c55e;
+    max-width: 250px;
+  }
+
+  .join-btn:hover {
+    background: #16a34a;
+  }
+
+  .progress-bar {
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: #000000;
+    width: 25%;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .walkthrough-hero {
+      padding: 80px 0 60px;
+    }
+
+    .walkthrough-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .walkthrough-header h1 {
+      font-size: clamp(1.5rem, 6vw, 1.875rem);
+    }
+
+    .walkthrough-header p {
+      font-size: 0.9rem;
+    }
+
+    .steps-container {
+      padding: 2.5rem 2rem;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      font-size: 1.125rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .step-content h3 {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+
+    .gif-placeholder {
+      padding: 2rem 1.25rem;
+    }
+
+    .gif-placeholder p {
+      font-size: 0.85rem;
+    }
+
+    .step-btn {
+      padding: 10px 24px;
+      font-size: 0.875rem;
+      max-width: 180px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .walkthrough-hero {
+      padding: 70px 0 50px;
+    }
+
+    .steps-container {
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-content h3 {
+      font-size: 1rem;
+      margin-bottom: 0.875rem;
+    }
+
+    .gif-placeholder {
+      padding: 1.75rem 1rem;
+    }
+
+    .gif-placeholder p {
+      font-size: 0.8rem;
+    }
+
+    .step-btn {
+      padding: 9px 20px;
+      font-size: 0.8rem;
+      max-width: 160px;
+    }
+  }
+</style>
+
+<script>
+  let currentStep = 1;
+  const totalSteps = 4;
+
+  // Make functions global so they can be called from onclick handlers
+  window.nextStep = nextStep;
+  window.updateProgress = updateProgress;
+  window.joinTelegram = joinTelegram;
+
+  function nextStep(step) {
+    console.log('Moving to step:', step);
+    
+    // Hide current step
+    const currentStepElement = document.querySelector(`[data-step="${currentStep}"]`);
+    if (currentStepElement) {
+      currentStepElement.classList.remove('active');
+    }
+    
+    // Show next step
+    currentStep = step;
+    const nextStepElement = document.querySelector(`[data-step="${currentStep}"]`);
+    if (nextStepElement) {
+      nextStepElement.classList.add('active');
+    }
+    
+    // Update progress
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const progressFill = document.getElementById('progressFill');
+    if (progressFill) {
+      const percentage = (currentStep / totalSteps) * 100;
+      progressFill.style.width = percentage + '%';
+    }
+  }
+
+  function joinTelegram() {
+    // This will be replaced with the actual Telegram bot URL
+    window.open('https://t.me/YOUR_BOT_LINK', '_blank');
+  }
+
+  // Initialize progress on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    updateProgress();
+  });
+</script>
+</Layout>

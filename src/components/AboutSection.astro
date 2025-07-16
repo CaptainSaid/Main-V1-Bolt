@@ -1,0 +1,109 @@
+---
+---
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Not Just a Journey.<br>A Movement.</h2>
+        <p>"Captain Said" started as one man's logbook at sea. It's now a growing global crew — sailors, dreamers, chefs, wanderers — who follow along, ask questions, and find clarity in the tides.</p>
+        
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                <path d="M2 17L12 22L22 17"/>
+                <path d="M2 12L12 17L22 12"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Daily Updates</h3>
+              <p class="text-small">Real-time dispatches from the deck, weather reports, and navigation insights.</p>
+            </div>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21V19C17 17.9 16.1 17 15 17H9C7.9 17 7 17.9 7 19V21"/>
+                <path d="M12 3C10.3 3 9 4.3 9 6S10.3 9 12 9 15 7.7 15 6 13.7 3 12 3Z"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Real Talk</h3>
+              <p class="text-small">Honest discussions about food, gear, and navigating storms both literal and metaphorical.</p>
+            </div>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 7H17L19 2H5L7 7Z"/>
+                <path d="M7 7L5.4 15.4C5.2 16.4 6 17 7 17H17C18 17 18.8 16.4 18.6 15.4L17 7"/>
+                <path d="M9 11V13"/>
+                <path d="M15 11V13"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Community Perks</h3>
+              <p class="text-small">Exclusive giveaways, brand collaborations, and first access to new content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+  }
+
+  .feature h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature p {
+    margin: 0;
+    color: #666666;
+  }
+
+  @media (max-width: 768px) {
+    .features {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

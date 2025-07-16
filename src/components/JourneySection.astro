@@ -1,0 +1,294 @@
+---
+---
+
+<section class="section">
+  <div class="container">
+    <div class="journey-header">
+      <h2>The SV Holdfast Journey</h2>
+      <p>Follow Brian Hathaway's incredible sailing adventure around the world. See where we've been and where we're heading next.</p>
+    </div>
+    
+    <div class="journey-timeline">
+      <div class="journey-year">
+        <div class="year-header">
+          <h3>2022</h3>
+          <div class="year-line"></div>
+        </div>
+        <div class="destinations">
+          <span class="destination">USA</span>
+          <span class="destination">Mexico</span>
+          <span class="destination">French Polynesia</span>
+          <span class="destination">American Samoa</span>
+          <span class="destination">Samoa</span>
+          <span class="destination">Fiji</span>
+          <span class="destination">Kiribati</span>
+          <span class="destination">Marshall Islands</span>
+          <span class="destination">Micronesia (FSM)</span>
+        </div>
+      </div>
+      
+      <div class="journey-year">
+        <div class="year-header">
+          <h3>2023</h3>
+          <div class="year-line"></div>
+        </div>
+        <div class="destinations">
+          <span class="destination">Guam</span>
+          <span class="destination">Palau</span>
+          <span class="destination">Indonesia</span>
+          <span class="destination">Singapore</span>
+          <span class="destination">Malaysia</span>
+          <span class="destination">Thailand</span>
+        </div>
+      </div>
+      
+      <div class="journey-year">
+        <div class="year-header">
+          <h3>2024</h3>
+          <div class="year-line"></div>
+        </div>
+        <div class="destinations">
+          <span class="destination">Cocos Keeling</span>
+          <span class="destination">Mauritius</span>
+          <span class="destination">Reunion</span>
+          <span class="destination">Madagascar</span>
+          <span class="destination">Mozambique</span>
+          <span class="destination">AFRICA!</span>
+        </div>
+      </div>
+      
+      <div class="journey-year upcoming">
+        <div class="year-header">
+          <h3>2025</h3>
+          <div class="year-line upcoming-line"></div>
+        </div>
+        <div class="destinations">
+          <span class="destination upcoming-dest">St Helena</span>
+          <span class="destination upcoming-dest">South America</span>
+          <span class="destination upcoming-dest">Grenada</span>
+          <span class="destination upcoming-dest">Barbados</span>
+          <span class="destination upcoming-dest">St. Lucia</span>
+          <span class="destination upcoming-dest">Dominica</span>
+          <span class="destination upcoming-dest">Martinique</span>
+          <span class="destination upcoming-dest">St Kitts</span>
+          <span class="destination upcoming-dest">Antigua</span>
+          <span class="destination upcoming-dest">San Juan</span>
+          <span class="destination upcoming-dest">DR</span>
+          <span class="destination upcoming-dest">Turks and Caicos</span>
+          <span class="destination upcoming-dest">Bahamas</span>
+          <span class="destination upcoming-dest">Jamaica</span>
+          <span class="destination upcoming-dest">Cuba</span>
+          <span class="destination upcoming-dest">Panama</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="journey-stats">
+      <div class="stat">
+        <div class="stat-number">40+</div>
+        <div class="stat-label">Countries & Territories</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Years of Adventure</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">25,000+</div>
+        <div class="stat-label">Nautical Miles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .journey-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+  }
+
+  .journey-timeline {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+
+  .journey-year {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+  }
+
+  .journey-year:hover {
+    border-color: #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .journey-year.upcoming {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+  }
+
+  .year-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .year-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+    min-width: 60px;
+  }
+
+  .year-line {
+    flex: 1;
+    height: 2px;
+    background: #e5e5e5;
+    border-radius: 1px;
+  }
+
+  .upcoming-line {
+    background: linear-gradient(90deg, #3b82f6 0%, #e5e5e5 100%);
+  }
+
+  .destinations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .destination {
+    background: #f8f8f8;
+    color: #333333;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+  }
+
+  .destination:hover {
+    background: #e8e8e8;
+    transform: translateY(-1px);
+  }
+
+  .destination.highlight {
+    background: #fef3c7;
+    color: #d97706;
+    border-color: #fbbf24;
+    font-weight: 600;
+  }
+
+  .upcoming-dest {
+    background: #dbeafe;
+    color: #1d4ed8;
+    border-color: #93c5fd;
+  }
+
+  .upcoming-dest:hover {
+    background: #bfdbfe;
+  }
+
+  .journey-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1;
+  }
+
+  .stat-label {
+    color: #666666;
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 1024px) {
+    .journey-year {
+      padding: 1.75rem;
+    }
+
+    .journey-stats {
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .journey-year {
+      padding: 1.5rem;
+    }
+
+    .year-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .year-header h3 {
+      font-size: 1.25rem;
+    }
+
+    .year-line {
+      width: 100%;
+      height: 1px;
+    }
+
+    .journey-stats {
+      gap: 2.5rem;
+    }
+
+    .stat-number {
+      font-size: 1.75rem;
+    }
+
+    .destinations {
+      gap: 0.5rem;
+    }
+
+    .destination {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .journey-year {
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .year-header h3 {
+      font-size: 1.125rem;
+    }
+
+    .journey-stats {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 1.5rem;
+    }
+
+    .destination {
+      font-size: 0.75rem;
+      padding: 3px 6px;
+    }
+  }
+</style>

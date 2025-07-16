@@ -1,0 +1,82 @@
+---
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; 2025 Brian Hathaway. All rights reserved.</p>
+      <div class="main-site-link">
+        <a href="https://www.svholdfast.com/" target="_blank" rel="noopener noreferrer" class="main-site-btn">
+          Read More About Brian
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #fafafa;
+    border-top: 1px solid #f0f0f0;
+    padding: 60px 0 30px;
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-bottom p {
+    color: #999999;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .main-site-link {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-site-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f8f8;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    transition: all 0.2s ease;
+  }
+
+  .main-site-btn:hover {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+  }
+
+  .main-site-btn svg {
+    transition: transform 0.2s ease;
+  }
+
+  .main-site-btn:hover svg {
+    transform: translate(1px, -1px);
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 40px 0 20px;
+    }
+  }
+</style>
+</footer>
