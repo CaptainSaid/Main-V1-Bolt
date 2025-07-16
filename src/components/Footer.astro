@@ -1,33 +1,74 @@
 ---
 ---
 
-<footer class="footer">
+<section class="hero">
   <div class="container">
-    <div class="footer-bottom">
-      <p>&copy; 2025 Brian Hathaway. All rights reserved.</p>
-      <div class="main-site-link">
-        <a href="https://www.svholdfast.com/" target="_blank" rel="noopener noreferrer" class="main-site-btn">
-          Read More About Brian
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-          </svg>
-        </a>
+    <div class="hero-content">
+      <div class="hero-title">
+        <h1>Captain Said</h1>
+        <p class="hero-subtitle">Get direct access to Brian Hathaway's exclusive sailing community</p>
+      </div>
+      
+      <div class="questions-section">
+        <div class="question">
+          <h2>Need Help Sailing?</h2>
+        </div>
+        
+        <div class="question">
+          <h2>Need Insight on Local Places to Eat While on the Water?</h2>
+        </div>
+        
+        <div class="question">
+          <h2>Need Help with Logistics?</h2>
+        </div>
+        
+        <div class="question">
+          <h2>Are You Inspired to Sail and Need Help Where to Start?</h2>
+        </div>
+        
+        <div class="question">
+          <h2>Want Real-Time Updates from a World Sailing Adventure?</h2>
+        </div>
+        
+        <div class="question">
+          <h2>Looking for a Community of Fellow Adventurers?</h2>
+        </div>
+        
+        <div class="question">
+          <h2>Need Tips on Boat Maintenance and Equipment?</h2>
+        </div>
+        
+        <div class="question">
+          <h2>Want to Learn from Someone Actually Living the Dream?</h2>
+        </div>
+      </div>
+      
+      <div class="solution-section">
+        <h1>Join Captain Said</h1>
+        <p class="hero-description">
+          Get direct access to Brian Hathaway's exclusive Telegram group where real sailors share real advice, local insights, and live updates from the SV Holdfast journey around the world.
+        </p>
+        <div class="hero-actions">
+          <a href="/signup" class="btn btn-large">Join Captain Said - $10/month</a>
+        </div>
+        <p class="guarantee">Cancel anytime • Join sailors and dreamers worldwide</p>
       </div>
     </div>
   </div>
-</footer>
+</section>
 
 <style>
-  .footer {
+  .hero {
+    padding: 120px 0 80px;
     background: 
-      linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%),
-      radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
-    border-top: 1px solid #f0f0f0;
-    padding: 60px 0 30px;
+      radial-gradient(ellipse at top, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(14, 165, 233, 0.12) 0%, transparent 50%),
+      linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     position: relative;
+    overflow: hidden;
   }
 
-  .footer::before {
+  .hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -36,68 +77,250 @@
     height: 100%;
     background: 
       repeating-linear-gradient(
-        0deg,
+        90deg,
         transparent,
-        transparent 2px,
-        rgba(14, 165, 233, 0.02) 2px,
-        rgba(14, 165, 233, 0.02) 4px
+        transparent 100px,
+        rgba(59, 130, 246, 0.02) 100px,
+        rgba(59, 130, 246, 0.02) 200px
       );
     pointer-events: none;
+    animation: wave-flow 20s linear infinite;
   }
 
-  .footer-bottom {
-    padding-top: 2rem;
-    border-top: 1px solid #f0f0f0;
+  @keyframes wave-flow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-200px); }
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .hero-title h1 {
+    color: #ffffff;
+  }
+
+  .hero-subtitle {
+    color: #e2e8f0;
+    color: #ffffff;
+  }
+
+  .hero-title h1 {
+    color: #ffffff;
+  }
+
+  .hero-subtitle {
+    color: #e2e8f0;
+    color: #ffffff;
+  }
+
+  .hero-title h1 {
+    color: #ffffff;
+  }
+
+  .hero-subtitle {
+    color: #e2e8f0;
+  }
+
+  .questions-section {
+    margin-bottom: 4rem;
+  }
+
+  .question {
+    margin-bottom: 1.5rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  .question:hover {
+    border-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .question h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .solution-section {
+    background: 
+      linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%),
+      radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    color: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .solution-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 50px,
+        rgba(59, 130, 246, 0.05) 50px,
+        rgba(59, 130, 246, 0.05) 100px
+      );
+    pointer-events: none;
+    animation: diagonal-flow 15s linear infinite;
+  }
+
+  @keyframes diagonal-flow {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(-100px) translateY(-100px); }
+  }
+
+  .solution-section h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
 
-  .footer-bottom p {
-    color: #999999;
+  .hero-actions .btn {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 600;
+  }
+
+  .hero-actions .btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-1px);
+  }
+
+  .guarantee {
     font-size: 0.875rem;
+    color: #999999;
     margin: 0;
   }
 
-  .main-site-link {
-    display: flex;
-    justify-content: center;
-  }
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 100px 0 60px;
+    }
 
-  .main-site-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #f8f8f8;
-    color: #666666;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 6px;
-    border: 1px solid #e5e5e5;
-    transition: all 0.2s ease;
-  }
+    .questions-section {
+      margin-bottom: 3rem;
+    }
 
-  .main-site-btn:hover {
-    background: #000000;
-    color: #ffffff;
-    border-color: #000000;
-  }
+    .question {
+      padding: 0.875rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
 
-  .main-site-btn svg {
-    transition: transform 0.2s ease;
-  }
+    .question h2 {
+      font-size: 1.125rem;
+    }
 
-  .main-site-btn:hover svg {
-    transform: translate(1px, -1px);
+    .solution-section {
+      padding: 2.5rem 1.5rem;
+    }
   }
 
   @media (max-width: 768px) {
-    .footer {
-      padding: 40px 0 20px;
+    .hero {
+      padding: 90px 0 50px;
+    }
+
+    .questions-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .question {
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .question h2 {
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .solution-section {
+      padding: 2rem 1.25rem;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 80px 0 40px;
+    }
+
+    .questions-section {
+      margin-bottom: 2rem;
+    }
+
+    .question {
+      padding: 0.625rem 1rem;
+      margin-bottom: 0.875rem;
+    }
+
+    .question h2 {
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    .solution-section {
+      padding: 1.75rem 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .solution-section h1 {
+      font-size: clamp(1.75rem, 8vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .guarantee {
+      font-size: 0.8rem;
     }
   }
 </style>
-</footer>
+</section>

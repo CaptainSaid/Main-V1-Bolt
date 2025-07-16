@@ -1,74 +1,74 @@
 ---
 ---
 
-<section class="section">
+<section class="hero">
   <div class="container">
-    <div class="features-content">
-      <h2>What You Get in Captain Said</h2>
-      <div class="features-grid">
-        <div class="feature">
-          <div class="feature-icon">⚓</div>
-          <h3>For Sailors & Future Sailors</h3>
-          <p>Get help with sailing logistics, route planning, equipment recommendations, and lessons learned from our journey around the world</p>
+    <div class="hero-content">
+      <div class="hero-title">
+        <h1>Captain Said</h1>
+        <p class="hero-subtitle">Get direct access to Brian Hathaway's exclusive sailing community</p>
+      </div>
+      
+      <div class="questions-section">
+        <div class="question">
+          <h2>Need Help Sailing?</h2>
         </div>
-        <div class="feature">
-          <div class="feature-icon">🍽️</div>
-          <h3>Local Insights & Food</h3>
-          <p>Discover the best places to eat, hidden gems, local customs, and practical tips for each destination we visit</p>
+        
+        <div class="question">
+          <h2>Need Insight on Local Places to Eat While on the Water?</h2>
         </div>
-        <div class="feature">
-          <div class="feature-icon">📱</div>
-          <h3>Real-Time Adventure</h3>
-          <p>Live updates, behind-the-scenes moments, weather challenges, and daily life aboard SV Holdfast as it happens</p>
+        
+        <div class="question">
+          <h2>Need Help with Logistics?</h2>
         </div>
-        <div class="feature">
-          <div class="feature-icon">🌍</div>
-          <h3>Armchair Adventurers</h3>
-          <p>Live the journey with us! Experience the adventure, ask questions, and be part of the story without leaving home</p>
+        
+        <div class="question">
+          <h2>Are You Inspired to Sail and Need Help Where to Start?</h2>
         </div>
-        <div class="feature">
-          <div class="feature-icon">💬</div>
-          <h3>Community & Support</h3>
-          <p>Connect with fellow sailors, dreamers, and adventure seekers. Share experiences and get advice from the community</p>
+        
+        <div class="question">
+          <h2>Want Real-Time Updates from a World Sailing Adventure?</h2>
         </div>
-        <div class="feature">
-          <div class="feature-icon">🎯</div>
-          <h3>Practical Tips & Tricks</h3>
-          <p>Learn from our mistakes and successes. Get practical advice on everything from boat maintenance to border crossings</p>
+        
+        <div class="question">
+          <h2>Looking for a Community of Fellow Adventurers?</h2>
         </div>
+        
+        <div class="question">
+          <h2>Need Tips on Boat Maintenance and Equipment?</h2>
+        </div>
+        
+        <div class="question">
+          <h2>Want to Learn from Someone Actually Living the Dream?</h2>
+        </div>
+      </div>
+      
+      <div class="solution-section">
+        <h1>Join Captain Said</h1>
+        <p class="hero-description">
+          Get direct access to Brian Hathaway's exclusive Telegram group where real sailors share real advice, local insights, and live updates from the SV Holdfast journey around the world.
+        </p>
+        <div class="hero-actions">
+          <a href="/signup" class="btn btn-large">Join Captain Said - $10/month</a>
+        </div>
+        <p class="guarantee">Cancel anytime • Join sailors and dreamers worldwide</p>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .features-content {
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .feature {
-    text-align: center;
+  .hero {
+    padding: 120px 0 80px;
     background: 
-      linear-gradient(135deg, #ffffff 0%, #f8fafc 100%),
-      radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.02) 0%, transparent 70%);
-    border: 1px solid #f0f0f0;
-    border-radius: 12px;
-    padding: 2rem;
-    transition: all 0.2s ease;
+      radial-gradient(ellipse at top, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(14, 165, 233, 0.12) 0%, transparent 50%),
+      linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     position: relative;
     overflow: hidden;
   }
 
-  .feature::before {
+  .hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -77,100 +77,240 @@
     height: 100%;
     background: 
       repeating-linear-gradient(
-        120deg,
+        90deg,
         transparent,
-        transparent 30px,
-        rgba(14, 165, 233, 0.01) 30px,
-        rgba(14, 165, 233, 0.01) 60px
+        transparent 100px,
+        rgba(59, 130, 246, 0.02) 100px,
+        rgba(59, 130, 246, 0.02) 200px
       );
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    animation: wave-flow 20s linear infinite;
   }
 
-  .feature:hover::before {
-    opacity: 1;
+  @keyframes wave-flow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-200px); }
   }
 
-  .feature:hover {
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .hero-title h1 {
+    color: #ffffff;
+  }
+
+  .hero-subtitle {
+    color: #e2e8f0;
+    color: #ffffff;
+  }
+
+  .hero-title h1 {
+    color: #ffffff;
+  }
+
+  .hero-subtitle {
+    color: #e2e8f0;
+  }
+
+  .questions-section {
+    margin-bottom: 4rem;
+  }
+
+  .question {
+    margin-bottom: 1.5rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  .question:hover {
     border-color: #e0e0e0;
     transform: translateY(-2px);
-    box-shadow: 
-      0 4px 20px rgba(0, 0, 0, 0.08),
-      0 8px 40px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
 
-  .feature-icon {
-    font-size: 3rem;
+  .question h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .solution-section {
+    background: 
+      linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%),
+      radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    color: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .solution-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 50px,
+        rgba(59, 130, 246, 0.05) 50px,
+        rgba(59, 130, 246, 0.05) 100px
+      );
+    pointer-events: none;
+    animation: diagonal-flow 15s linear infinite;
+  }
+
+  @keyframes diagonal-flow {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(-100px) translateY(-100px); }
+  }
+
+  .solution-section h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
     margin-bottom: 1rem;
   }
 
-  .feature h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
+  .hero-actions .btn {
+    background: #ffffff;
     color: #000000;
+    font-weight: 600;
   }
 
-  .feature p {
-    font-size: 1rem;
-    color: #666666;
+  .hero-actions .btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-1px);
+  }
+
+  .guarantee {
+    font-size: 0.875rem;
+    color: #999999;
     margin: 0;
-    line-height: 1.6;
   }
 
   @media (max-width: 1024px) {
-    .features-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .hero {
+      padding: 100px 0 60px;
     }
 
-    .feature {
-      padding: 1.75rem;
+    .questions-section {
+      margin-bottom: 3rem;
+    }
+
+    .question {
+      padding: 0.875rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .question h2 {
+      font-size: 1.125rem;
+    }
+
+    .solution-section {
+      padding: 2.5rem 1.5rem;
     }
   }
 
   @media (max-width: 768px) {
-    .features-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+    .hero {
+      padding: 90px 0 50px;
     }
 
-    .feature {
-      padding: 1.5rem;
+    .questions-section {
+      margin-bottom: 2.5rem;
     }
 
-    .feature-icon {
-      font-size: 2.5rem;
+    .question {
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 1rem;
     }
 
-    .feature h3 {
+    .question h2 {
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .solution-section {
+      padding: 2rem 1.25rem;
+    }
+
+    .hero-description {
       font-size: 1.125rem;
-    }
-
-    .feature p {
-      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
     }
   }
 
   @media (max-width: 480px) {
-    .features-grid {
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
+    .hero {
+      padding: 80px 0 40px;
     }
 
-    .feature {
-      padding: 1.25rem;
+    .questions-section {
+      margin-bottom: 2rem;
     }
 
-    .feature-icon {
-      font-size: 2rem;
+    .question {
+      padding: 0.625rem 1rem;
+      margin-bottom: 0.875rem;
     }
 
-    .feature h3 {
+    .question h2 {
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    .solution-section {
+      padding: 1.75rem 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .solution-section h1 {
+      font-size: clamp(1.75rem, 8vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .hero-description {
       font-size: 1rem;
+      margin-bottom: 1.25rem;
     }
 
-    .feature p {
-      font-size: 0.875rem;
+    .guarantee {
+      font-size: 0.8rem;
     }
   }
 </style>
+</section>
