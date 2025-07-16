@@ -60,33 +60,42 @@
 <style>
   .hero {
     padding: 120px 0 80px;
-    background: #ffffff;
+    background: 
+      radial-gradient(ellipse at top, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(14, 165, 233, 0.12) 0%, transparent 50%),
+      linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     position: relative;
     overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 100px,
+        rgba(59, 130, 246, 0.02) 100px,
+        rgba(59, 130, 246, 0.02) 200px
+      );
+    pointer-events: none;
+    animation: wave-flow 20s linear infinite;
+  }
+
+  @keyframes wave-flow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-200px); }
   }
 
   .hero-content {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    color: #000000;
-  }
-
-  .hero-title h1 {
-    color: #000000;
-  }
-
-  .hero-subtitle {
-    color: #666666;
-    color: #ffffff;
-  }
-
-  .hero-title h1 {
-    color: #ffffff;
-  }
-
-  .hero-subtitle {
-    color: #e2e8f0;
     color: #ffffff;
   }
 
@@ -105,11 +114,10 @@
   .question {
     margin-bottom: 1.5rem;
     padding: 1rem 2rem;
-    background: #ffffff;
-    border: 1px solid #f0f0f0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     transition: all 0.2s ease;
-    backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
 
@@ -128,11 +136,39 @@
   }
 
   .solution-section {
-    background: #000000;
+    background: 
+      linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%),
+      radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
     color: #ffffff;
     padding: 3rem 2rem;
     border-radius: 16px;
     margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .solution-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 50px,
+        rgba(59, 130, 246, 0.05) 50px,
+        rgba(59, 130, 246, 0.05) 100px
+      );
+    pointer-events: none;
+    animation: diagonal-flow 15s linear infinite;
+  }
+
+  @keyframes diagonal-flow {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(-100px) translateY(-100px); }
   }
 
   .solution-section h1 {
